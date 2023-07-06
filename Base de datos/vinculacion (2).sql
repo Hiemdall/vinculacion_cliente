@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-07-2023 a las 00:38:04
+-- Tiempo de generación: 07-07-2023 a las 00:33:47
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -33,23 +33,32 @@ CREATE TABLE `tabla_cuestionario` (
   `nombre_datos` varchar(20) NOT NULL,
   `tipo_documento_datos` varchar(20) NOT NULL,
   `dv_datos` varchar(20) NOT NULL,
+  `numero_datos` varchar(30) NOT NULL,
   `direccion_datos` varchar(20) NOT NULL,
+  `departamento_datos` varchar(30) NOT NULL,
   `ciudad_datos` varchar(20) NOT NULL,
   `correo_principal_datos` varchar(30) NOT NULL,
-  `correo_facturacion_datos` varchar(30) NOT NULL,
   `telefono_datos` varchar(20) NOT NULL,
   `telefono_movil_datos` varchar(20) NOT NULL,
-  `detalle_actividad_eco_datos` varchar(20) NOT NULL
+  `detalle_actividad_eco_datos` varchar(20) NOT NULL,
+  `nombre_legal` varchar(30) NOT NULL,
+  `tipo_documento_legal` varchar(10) NOT NULL,
+  `dv_legal` varchar(10) NOT NULL,
+  `numero_legal` varchar(30) NOT NULL,
+  `departamento_legal` varchar(20) NOT NULL,
+  `ciudad_legal` varchar(20) NOT NULL,
+  `direccion_legal` varchar(30) NOT NULL,
+  `correo_principal_legal` varchar(20) NOT NULL,
+  `telefono_legal` varchar(20) NOT NULL,
+  `telefono_movil_legal` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `tabla_cuestionario`
 --
 
-INSERT INTO `tabla_cuestionario` (`id`, `fecha`, `nombre_datos`, `tipo_documento_datos`, `dv_datos`, `direccion_datos`, `ciudad_datos`, `correo_principal_datos`, `correo_facturacion_datos`, `telefono_datos`, `telefono_movil_datos`, `detalle_actividad_eco_datos`) VALUES
-(1, '2023-06-14', 'Integratic', 'CC', '', 'Santigo de cali', 'cali', 'heimdallr20@gmail.co', 'facturacion@integrat', '3176040660', '', ''),
-(2, '2023-07-05', 'Astorga', 'nit', '', 'Santigo de cali', 'cali', 'heimdallr20@gmail.co', 'heimdallr20@hotmail.', '0000000', '', ''),
-(3, '2023-07-06', 'Patricia', 'Pasaporte', '45878', 'Santigo de cali', 'Bogotá', 'heimdallr20@gmail.com', 'heimdallr20@hotmail.com', '3176040660', '3044561957', '7842145');
+INSERT INTO `tabla_cuestionario` (`id`, `fecha`, `nombre_datos`, `tipo_documento_datos`, `dv_datos`, `numero_datos`, `direccion_datos`, `departamento_datos`, `ciudad_datos`, `correo_principal_datos`, `telefono_datos`, `telefono_movil_datos`, `detalle_actividad_eco_datos`, `nombre_legal`, `tipo_documento_legal`, `dv_legal`, `numero_legal`, `departamento_legal`, `ciudad_legal`, `direccion_legal`, `correo_principal_legal`, `telefono_legal`, `telefono_movil_legal`) VALUES
+(11, '07/07/23', 'Heimdall', 'Pasaporte', '0001', '14721994', 'Santigo de cali', 'Amazonas', 'leticia', 'heimdallr20@gmail.com', '3176040660', '2454', '79845', 'Pablo Peres', 'CE', '354353', '8745212', 'Antioquia', 'Medellin', 'Santigo de cali tht', 'pablo@gmail.com', '3176040660', '3176040660');
 
 --
 -- Índices para tablas volcadas
@@ -69,7 +78,7 @@ ALTER TABLE `tabla_cuestionario`
 -- AUTO_INCREMENT de la tabla `tabla_cuestionario`
 --
 ALTER TABLE `tabla_cuestionario`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
