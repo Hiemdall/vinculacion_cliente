@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5F5;
+  }
+
+  h1{
+    font-size: 25px;
+    color: rgb(13, 75, 133);
+    margin: 10px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .box {
+    position: relative;
+    width: 350px;
+    height: 400px;
+  
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grup{
+    width: 100%;
+    display: grid;
+    place-content: center;
+    margin: 24px 0px 24px 0px;
+  }
+  
+  img {
+      
+    margin-bottom: 20px;
+    display: block;
+    margin: 0% auto;
+     
+  }
+  
+  .fa-address-card {
+    color: #555;
+  }
+  
+  label{
+    color: #333;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 5px 0;
+  }
+
+  input[type="text"] {
+    width: 250px;
+    height: 40px;
+    border: none;
+    background-color: #ccc;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-bottom: 0% auto;
+    font-size: 16px;
+  }
+  
+  button[type="submit"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    margin: auto;
+    border: none;
+    background-color: rgb(13, 75, 133); 
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    
+  }
+  
+  button[type="submit"] i {
+    margin-right: 10px;
+  }
+  
+  button[type="submit"]:hover {
+    transform: scale(1.10);
+    background-color: rgb(59, 156, 247);
+  }
+
