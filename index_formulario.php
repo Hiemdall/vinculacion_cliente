@@ -177,6 +177,56 @@
     <!--#################################################################### Personas de Contactos ##############################################################################-->
     <h2>Personas de Contactos</h2>
 
+    <h4>Persona de contacto de contabilidad:</h4>
+    <label for="nombre_contabilidad">Nombre y Apellido:</label>
+    <input type="text" id="nombre_contabilidad" name="nombre_contabilidad" required><br><br>
+
+    <label for="correo_contabilidad">Correo del área de Contabilidad:</label>
+    <input type="email" id="correo_contabilidad" name="correo_contabilidad" required><br><br>
+
+    <label for="telefono_fijo_contabilidad">Teléfono Fijo del área de contabilidad:</label>
+    <input type="tel" id="telefono_fijo_contabilidad" name="telefono_fijo_contabilidad" required><br><br>
+
+    <label for="ext_contabilidad">Extensión del área de contabilidad:</label>
+    <input type="tel" id="ext_contabilidad" name="ext_contabilidad" required><br><br>
+
+    <label for="telefono_movil_contabilidad">Teléfono móvil del área de contabilidad:</label>
+    <input type="tel" id="telefono_movil_contabilidad" name="telefono_movil_contabilidad" required><br><br>
+    <h4>Persona de contacto de Tesorería:</h4>
+    <label for="nombre_tesoreria">Nombre y Apellido:</label>
+    <input type="text" id="nombre_tesoreria" name="nombre_tesoreria" required><br><br>
+
+    <label for="correo_tesoreria">Correo del área de Tesorería:</label>
+    <input type="email" id="correo_tesoreria" name="correo_tesoreria" required><br><br>
+
+    <label for="telefono_fijo_tesoreria">Teléfono Fijo del área de Tesorería:</label>
+    <input type="tel" id="telefono_fijo_tesoreria" name="telefono_fijo_tesoreria" required><br><br>
+
+    <label for="ext_tesoreria">Extensión del área de Tesorería:</label>
+    <input type="tel" id="ext_tesoreria" name="ext_tesoreria" required><br><br>
+
+    <label for="telefono_movil_tesoreria">Teléfono móvil del área de Tesorería:</label>
+    <input type="tel" id="telefono_movil_tesoreria" name="telefono_movil_tesoreria" required><br><br>
+    <h4>Persona de contacto de Cartera:</h4>
+    <label for="nombre_cartera">Nombre y Apellido:</label>
+    <input type="text" id="nombre_cartera" name="nombre_cartera" required><br><br>
+
+    <label for="correo_cartera">Correo del área de Cartera:</label>
+    <input type="email" id="correo_cartera" name="correo_cartera" required><br><br>
+
+    <label for="telefono_fijo_cartera">Teléfono Fijo del área de Cartera:</label>
+    <input type="tel" id="telefono_fijo_cartera" name="telefono_fijo_cartera" required><br><br>
+
+    <label for="ext_cartera">Extensión del área de Cartera:</label>
+    <input type="tel" id="ext_cartera" name="ext_cartera" required><br><br>
+
+    <label for="telefono_movil_cartera">Teléfono móvil del área de Cartera:</label>
+    <input type="tel" id="telefono_movil_cartera" name="telefono_movil_cartera" required><br><br>
+
+    <label for="fecha_cierre_facturacion">Fecha de Cierre de Facturación:</label>
+    <input type="date" id="fecha_cierre_facturacion" name="fecha_cierre_facturacion" required><br><br>
+    
+    
     <!--############################################################### Características Tributarias #############################################################################-->
     <h2>Características Tributarias</h2>
 
@@ -187,7 +237,7 @@
   </form>
 
   <script>
-function disableOtherCheckboxes(checkboxId) {
+  function disableOtherCheckboxes(checkboxId) {
   const checkboxes = document.querySelectorAll('input[name="tipo_documento_legal"]');
   
   checkboxes.forEach(function(checkbox) {
