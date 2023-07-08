@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Integratic</title>
+    <!-- Generar una alerta con SweetAlert -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style3.css">
+    
+     
+     
 </head>
 <body>
-    <h1>Formulario de Cuestionario</h1>
+    <h1>Formulario de Viculación del cliente</h1>
     <form action="guardar.php" method="post">
       <?php
       $fechaActual = date('d/m/y');
@@ -22,15 +28,18 @@
 
     <label for="tipo_documento">Tipo de Documento:</label>
     <div class="checkbox-group">
-    <input type="checkbox" id="cc" name="tipo_documento" value="CC" onchange="disableOtherCheckboxes('CC')">
-    <label for="cc">CC</label>
-    <input type="checkbox" id="cd" name="tipo_documento" value="CE" onchange="disableOtherCheckboxes('CC')">
-    <label for="cd">CE</label>
-    <input type="checkbox" id="pasaporte" name="tipo_documento" value="Pasaporte" onchange="disableOtherCheckboxes('CC')">
-    <label for="pasaporte">Pasaporte</label>
-    <input type="checkbox" id="nit" name="tipo_documento" value="Nit" onchange="disableOtherCheckboxes('CC')">
-    <label for="nit">Nit</label><br><br>
-  </div>
+        <input type="checkbox" id="cc" name="tipo_documento" value="CC" onchange="uncheckOther(this)">
+        <label for="cc">CC</label>
+    
+        <input type="checkbox" id="cd" name="tipo_documento" value="CE" onchange="uncheckOther(this)">
+        <label for="cd">CE</label>
+    
+        <input type="checkbox" id="pasaporte" name="tipo_documento" value="Pasaporte" onchange="uncheckOther(this)">
+        <label for="pasaporte">Pasaporte</label>
+    
+        <input type="checkbox" id="nit" name="tipo_documento" value="Nit" onchange="uncheckOther(this)">
+        <label for="nit">NIT</label>
+    </div>
 
     <label for="dv_datos">DV :</label>
     <input type="text" id="dv_datos" name="dv_datos" required><br><br>
@@ -102,14 +111,17 @@
 
     <label for="tipo_documento_legal">Tipo de Documento:</label>
     <div class="checkbox-group">
-    <input type="checkbox" id="cc" name="tipo_documento_legal" value="CC">
-    <label for="cc">CC</label>
-    <input type="checkbox" id="cd" name="tipo_documento_legal" value="CE">
-    <label for="cd">CE</label>
-    <input type="checkbox" id="pasaporte" name="tipo_documento_legal" value="Pasaporte">
-    <label for="pasaporte">Pasaporte</label>
-    <input type="checkbox" id="nit" name="tipo_documento_legal" value="Nit">
-    <label for="nit">Nit</label><br><br>
+    <input type="checkbox" id="cc" name="tipo_documento_legal" value="CC" onchange="uncheckOther_legal(this)">
+        <label for="cc">CC</label>
+    
+        <input type="checkbox" id="cd" name="tipo_documento_legal" value="CE" onchange="uncheckOther_legal(this)">
+        <label for="cd">CE</label>
+    
+        <input type="checkbox" id="pasaporte" name="tipo_documento_legal" value="Pasaporte" onchange="uncheckOther_legal(this)">
+        <label for="pasaporte">Pasaporte</label>
+    
+        <input type="checkbox" id="nit" name="tipo_documento_legal" value="Nit" onchange="uncheckOther_legal(this)">
+        <label for="nit">NIT</label>
   </div>
 
     <label for="dv_datos_legal">DV :</label>
@@ -228,25 +240,52 @@
     
     
     <!--############################################################### Características Tributarias #############################################################################-->
-    <h2>Características Tributarias</h2>
+    
+    <label for="Caracteristicas_Tributarias">Características Tributarias</label>
+    <div class="checkbox-group">
+        <input type="checkbox" id="persona_natural" name="Caracteristicas_Tributarias" value="Persona Natural" onchange="uncheckOther_tributaria(this)">
+        <label for="persona_natural">Persona Natural</label>
+    
+        <input type="checkbox" id="reg_comun" name="Caracteristicas_Tributarias" value="Regimen Común" onchange="uncheckOther_tributaria(this)">
+        <label for="reg_comun">Regimen Común</label>
+    
+        <input type="checkbox" id="gran_contribuyente" name="Caracteristicas_Tributarias" value="Gran Contribuyente" onchange="uncheckOther_tributaria(this)">
+        <label for="gran_contribuyente">Gran Contribuyente</label>
+    
+        <input type="checkbox" id="reg_simplificado" name="Caracteristicas_Tributarias" value="Regimen Simplificado" onchange="uncheckOther_tributaria(this)">
+        <label for="reg_simplificado">Regimen Simplificado</label>
+
+         <input type="checkbox" id="autorretenedor" name="Caracteristicas_Tributarias" value="Autorretenedor" onchange="uncheckOther_tributaria(this)">
+        <label for="autorretenedor">Autorretenedor</label>
+  </div>
+  <div class="checkbox-group">
+        <input type="checkbox" id="si" name="retiene_ica" value="Si" onchange="uncheckOther_ica(this)">
+        <label for="si">Si</label>
+    
+        <input type="checkbox" id="no" name="retiene_ica" value="No" onchange="uncheckOther_ica(this)">
+        <label for="no">NO</label> 
+  </div>  
+  
+        <label for="ica_cod_actividad">ICA Cod Actividad:</label>
+        <input type="text" id="ica_cod_actividad" name="ica_cod_actividad" required><br><br>
+
+    <!--######################################  Autorización de tratamiento de los datos personales y de la empresa  #############################################################################-->
+    <h2>Autorización de tratamiento de los datos personales y de la empresa</h2>
+       
 
     <!--################################################## Nombre y cargo de la persona cargo la infomación  ###################################################################-->
     <h2>Información del Representante Legal</h2>
+    <label for="nom_diligencio">Nombre y Apellido quien diligenció el formulario:</label>
+    <input type="text" id="nom_diligencio" name="nom_diligencio" required><br><br>
 
-    <input type="submit" value="Guardar">
+    <label for="cargo_diligencio">Cargo quien diligenció el formulario:</label>
+    <input type="text" id="cargo_diligencio" name="cargo_diligencio" required><br><br> 
+
+    <input type="submit" value="Enviar  Formulario">
   </form>
 
-  <script>
-  function disableOtherCheckboxes(checkboxId) {
-  const checkboxes = document.querySelectorAll('input[name="tipo_documento_legal"]');
-  
-  checkboxes.forEach(function(checkbox) {
-    if (checkbox.id !== checkboxId) {
-      checkbox.disabled = document.getElementById(checkboxId).checked;
-    }
-  });
-}
-</script>
+
+  <script src="checkbox.js"></script>
   <script src="ciudades.js"></script>
   
 </body>

@@ -45,6 +45,13 @@ $telefono_movil_cartera = $_POST['telefono_movil_cartera'];
 
 $fecha_cierre_facturacion = $_POST['fecha_cierre_facturacion'];
 
+$Caracteristicas_Tributarias = $_POST['Caracteristicas_Tributarias'];
+
+$retiene_ica = $_POST['retiene_ica'];
+$ica_cod_actividad  = $_POST['ica_cod_actividad'];
+// Nombre y cargo de la persona cargo la infomación
+$nom_diligencio  = $_POST['nom_diligencio'];
+$cargo_diligencio  = $_POST['cargo_diligencio'];
 
 
 
@@ -67,16 +74,22 @@ $sql = "INSERT INTO tabla_cuestionario (fecha, nombre_datos, tipo_documento_dato
                                         nombre_contabilidad, correo_contabilidad, telefono_fijo_contabilidad, ext_contabilidad, telefono_movil_contabilidad,
                                         nombre_tesoreria, correo_tesoreria, telefono_fijo_tesoreria, ext_tesoreria, telefono_movil_tesoreria,
                                         nombre_cartera, correo_cartera, telefono_fijo_cartera, ext_cartera, telefono_movil_cartera,
-                                        fecha_cierre_facturacion)
+                                        fecha_cierre_facturacion,
+                                        Caracteristicas_Tributarias, retiene_ica, ica_cod_actividad,
+                                        nom_diligencio, cargo_diligencio)
         VALUES ('$fecha', '$nombre', '$tipo_documento', '$dv_datos', '$numero_datos', '$direccion', '$departameto', '$ciudad', '$correo_principal', '$telefono', '$telefono_movil', '$detalle_act_datos',
                 '$nombre_legal', '$tipo_documento_legal', '$dv_datos_legal', '$numero_legal', '$departamento_legal', '$ciudad_legal', '$direccion_legal', '$correo_principal_legal', '$telefono_legal', '$telefono_movil_legal',
                 '$nombre_contabilidad','$correo_contabilidad','$telefono_fijo_contabilidad','$ext_contabilidad','$telefono_movil_contabilidad',
                 '$nombre_tesoreria','$correo_tesoreria','$telefono_fijo_tesoreria','$ext_tesoreria','$telefono_movil_tesoreria',
                 '$nombre_cartera','$correo_cartera','$telefono_fijo_cartera','$ext_cartera','$telefono_movil_cartera',
-                '$fecha_cierre_facturacion')";
+                '$fecha_cierre_facturacion',
+                '$Caracteristicas_Tributarias', '$retiene_ica', '$ica_cod_actividad',
+                '$nom_diligencio','$cargo_diligencio')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Los datos se guardaron correctamente.";
+    // Generar una alerta con SweetAlert 
+
+    echo "Los datos se enviaron correctamente.";
 } else {
     echo "Error al guardar los datos: " . $conn->error;
 }
