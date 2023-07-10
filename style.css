@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .conteiner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+  }
+
+  .conteiner .fecha {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .conteiner .fecha input {
+    padding: 5px;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid grey;
+  }
+
+  
+  form {
+    display: grid;
+    width: 85%;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    padding: 24px;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .card {
+    display: grid;
+    padding: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin-bottom: 24px;
+  }
+  
+  .card .columna {
+    display: flex;
+    flex-direction: column;
+    padding: 1px;
+    width: 250px;
+  }
+  
+  .card label {
+    grid-column: 1 / 2;
+    margin-bottom: 5px;
+  }
+  
+  .card select {
+    width: 105%;
+    padding: 5px;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid grey;
+    
+  }
+
+  .card input[type="text"],
+  .card input[type="email"],
+  .card input[type="tel"]{
+    width: 100%;
+    padding: 5px;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid grey;
+  }
+  
+  
+  .checkbox-group {
+    grid-column: 2 / -1;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .checkbox-group input[type="checkbox"] {
+    margin: 0;
+  }
+  
+  .checkbox-group label {
+    margin: 0;
+  }
+  
+  
