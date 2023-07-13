@@ -238,7 +238,7 @@
             <input type="text" id="cargo_diligencio" name="cargo_diligencio" required>
         </div>
     
-        <input type="submit" value="Enviar">
+        <input type="submit" value="Enviar Formulario">
     </form>
     <script src="script.js"></script>
 </body>
