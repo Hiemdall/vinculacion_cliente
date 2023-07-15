@@ -6,7 +6,7 @@
     <title>Integratic</title>
     <!-- Generar una alerta con SweetAlert -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
-     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style14.css">
 </head>
 <body>
@@ -68,7 +68,7 @@
                 <option value="7">7</option>
                 <option value="8">8</option>
                 <option value="9">9</option>
-           <!-- Opciones de departamentos -->
+           
             </select>
             </div>
     
@@ -88,12 +88,12 @@
                 <option value="">Selecciona un Departamento</option>
                 <option value="Amazonas">Amazonas</option>
                 <option value="Antioquia">Antioquia</option>
-                <option value="Caquetá">Caquetá</option>
                 <option value="Arauca">Arauca</option>
                 <option value="Atlántico">Atlántico</option>
                 <option value="Bolívar">Bolívar</option>
                 <option value="Boyacá">Boyacá</option>
                 <option value="Caldas">Caldas</option>
+                <option value="Caquetá">Caquetá</option>
                 <option value="Casanare">Casanare</option>
                 <option value="Cauca">Cauca</option>
                 <option value="Cesar">Cesar</option>
@@ -118,7 +118,8 @@
                 <option value="Valle del Cauca">Valle del Cauca</option>
                 <option value="Vaupés">Vaupés</option>
                 <option value="Vichada">Vichada</option>
-                <!-- Opciones de departamentos -->
+                <!-- Opciones de departamentos -->              
+
             </select>
             </div>
             
@@ -391,6 +392,9 @@
                 
                 <label for="autorretenedor" style="font-size: 10px;">Autorretenedor</label>
                 <input type="checkbox" id="autorretenedor" name="Caracteristicas_Tributarias" value="Autorretenedor" onchange="uncheckOther_tributaria(this)">
+
+                <label for="otros" style="font-size: 10px;">Otros</label>
+                <input type="checkbox" id="otros" name="Caracteristicas_Tributarias" value="Otros" onchange="uncheckOther_tributaria(this)">
                 
             
         </div>
@@ -440,10 +444,13 @@
 
     </form>
     <script src="checkbox.js"></script>
-    <script src="ciudades.js"></script>
+    <script src="ciudades_colombia.js"></script>
     
+   </div>
 </div>
-</div>
+
+
+
 </body>
 
 </html>

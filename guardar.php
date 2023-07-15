@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
+</head>
+<body>
+ 
 <?php
 // Obtener los datos del formulario
 // Datos del Asociado de Negocio
@@ -53,8 +64,6 @@ $ica_cod_actividad  = $_POST['ica_cod_actividad'];
 $nom_diligencio  = $_POST['nom_diligencio'];
 $cargo_diligencio  = $_POST['cargo_diligencio'];
 
-
-
 // Conectar a la base de datos
 $servername = "localhost";
 $username = "root";
@@ -88,12 +97,25 @@ $sql = "INSERT INTO tabla_cuestionario (fecha, nombre_datos, tipo_documento_dato
 
 if ($conn->query($sql) === TRUE) {
     // Generar una alerta con SweetAlert 
-
-    echo "Los datos se enviaron correctamente.";
+    echo '<script>';
+    echo 'Swal.fire({';
+    echo '  icon: "success",';
+    echo '  title: "Formulario Enviado",';
+    echo '  showConfirmButton: true';
+    echo '}).then(() => {';
+    echo '  window.location.href = "index_formulario.php";'; // Reemplaza "nombre_del_formulario.php" con el nombre de tu archivo de formulario
+    echo '});';
+    echo '</script>';
 } else {
     echo "Error al guardar los datos: " . $conn->error;
 }
 
+
+
 // Cerrar la conexión
 $conn->close();
 ?>
+
+   
+</body>
+</html>
