@@ -187,13 +187,13 @@
 
 
         <div class="user-input-box" style="width: 180px;">
-            <label for="numero_datos">Número:</label>
-            <input type="text" id="numero_datos" name="numero_datos" required>
+            <label for="numero_legal">Número:</label>
+            <input type="text" id="numero_legal" name="numero_legal" required>
             </div>
 
             <div class="user-input-box" style="width: 50px;">
-            <label for="dv_datos">DV:</label>
-            <select id="dv_datos" name="dv_datos" >
+            <label for="dv_datos_legal">DV:</label>
+            <select id="dv_datos_legal" name="dv_datos_legal" >
                 <option value=""></option>
                 <option value="0">0</option>
                 <option value="1">1</option>
