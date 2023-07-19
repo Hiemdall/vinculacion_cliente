@@ -10,6 +10,10 @@
 <body>
  
 <?php
+
+// Llamar a el archivo conexion.php para hacer la conexion a la base de datos
+include("conexion.php");
+
 // Obtener los datos del formulario
 // Datos del Asociado de Negocio
 $fecha = $_POST['fecha'];
@@ -20,7 +24,7 @@ $numero_datos = $_POST['numero_datos'];
 $direccion = $_POST['direccion'];
 $departameto = $_POST['departamento'];
 $ciudad = $_POST['ciudad'];
-$correo_principal = $_POST['correo_principal'];
+$correo_principal = $_POST['correo_principal_datos'];
 $telefono = $_POST['telefono'];
 $telefono_movil = $_POST['telefono_datos'];
 $detalle_act_datos = $_POST['detalle_act_datos'];
@@ -65,7 +69,7 @@ $nom_diligencio  = $_POST['nom_diligencio'];
 $cargo_diligencio  = $_POST['cargo_diligencio'];
 
 // Conectar a la base de datos
-$servername = "localhost";
+/*$servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "vinculacion";
@@ -75,7 +79,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 // Verificar la conexión
 if ($conn->connect_error) {
     die("Error al conectar a la base de datos: " . $conn->connect_error);
-}
+}*/
 
 // Insertar los datos en la tabla
 $sql = "INSERT INTO tabla_cuestionario (fecha, nombre_datos, tipo_documento_datos, dv_datos, numero_datos, direccion_datos, departamento_datos, ciudad_datos, correo_principal_datos, telefono_datos, telefono_movil_datos, detalle_actividad_eco_datos,
