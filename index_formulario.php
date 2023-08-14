@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Integratic</title>
+
     <!-- Generar una alerta con SweetAlert -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style15.css">
+    <link rel="stylesheet" type="text/css" href="style16.css">
 </head>
 <body>
 
@@ -17,7 +18,7 @@
     <h1 class="form-title">Actualización Datos Clientes o Proveedores</h1>
        
     
-        <form action="guardar.php" method="post">
+        <form action="guardar.php" method="post" enctype="multipart/form-data">
             
         <div class="main-user-info" style="justify-content: end;">
         <div class="user-input-box" style="width: 250px;">
@@ -289,12 +290,12 @@
 
             <div class="user-input-box">
             <label for="nombre_contabilidad">Nombre y Apellido:</label>
-            <input type="text" id="nombre_contabilidad" name="nombre_contabilidad" placeholder="Nombre y Apellido" onkeydown="moveToNextInput(event, 'correo_contabilidad')">
+            <input type="text" id="nombre_contabilidad" name="nombre_contabilidad" placeholder="Nombre y Apellido" onkeydown="moveToNextInput(event, 'correo_contabilidad')" required>
             </div>
             
             <div class="user-input-box">
             <label for="correo_contabilidad">Correo principal:</label>
-            <input type="email" id="correo_contabilidad" name="correo_contabilidad" placeholder="Correo electrónico principal" onkeydown="moveToNextInput(event, 'ext_contabilidad')">
+            <input type="email" id="correo_contabilidad" name="correo_contabilidad" placeholder="Correo electrónico principal" onkeydown="moveToNextInput(event, 'ext_contabilidad')" required>
             </div>
             
             <div class="user-input-box">
@@ -309,7 +310,7 @@
                                  
             <div class="user-input-box">
             <label for="telefono_movil_contabilidad">Teléfono Móvil:</label>
-            <input type="tel" id="telefono_movil_contabilidad" name="telefono_movil_contabilidad" placeholder="Ejemplo: 3153758214" onkeydown="moveToNextInput(event, 'nombre_tesoreria')">
+            <input type="tel" id="telefono_movil_contabilidad" name="telefono_movil_contabilidad" placeholder="Ejemplo: 3153758214" onkeydown="moveToNextInput(event, 'nombre_tesoreria')"required>
             </div>
             </div>
 
@@ -317,13 +318,13 @@
             <div class="main-user-info">
             <div class="user-input-box">
             <label for="nombre_tesoreria">Nombre y Apellido:</label>
-            <input type="text" id="nombre_tesoreria" name="nombre_tesoreria" placeholder="Nombre y Apellido" onkeydown="moveToNextInput(event, 'correo_tesoreria')">
+            <input type="text" id="nombre_tesoreria" name="nombre_tesoreria" placeholder="Nombre y Apellido" onkeydown="moveToNextInput(event, 'correo_tesoreria')" required>
             </div>
             
 
             <div class="user-input-box">
             <label for="correo_tesoreria">Correo principal:</label>
-            <input type="email" id="correo_tesoreria" name="correo_tesoreria" placeholder="Correo electrónico principal" onkeydown="moveToNextInput(event, 'ext_tesoreria')">
+            <input type="email" id="correo_tesoreria" name="correo_tesoreria" placeholder="Correo electrónico principal" onkeydown="moveToNextInput(event, 'ext_tesoreria')" required>
             </div>
             
             <div class="user-input-box">
@@ -340,7 +341,7 @@
             
             <div class="user-input-box">
             <label for="telefono_movil_tesoreria">Teléfono Móvil:</label>
-            <input type="tel" id="telefono_movil_tesoreria" name="telefono_movil_tesoreria" placeholder="Ejemplo: 3153758214" onkeydown="moveToNextInput(event, 'nombre_cartera')">
+            <input type="tel" id="telefono_movil_tesoreria" name="telefono_movil_tesoreria" placeholder="Ejemplo: 3153758214" onkeydown="moveToNextInput(event, 'nombre_cartera')" required>
             </div>
             </div>
 
@@ -351,12 +352,12 @@
             
             <div class="user-input-box"> 
             <label for="nombre_cartera">Nombre y Apellido:</label>
-            <input type="text" id="nombre_cartera" name="nombre_cartera" placeholder="Nombre y Apellido" onkeydown="moveToNextInput(event, 'correo_cartera')">
+            <input type="text" id="nombre_cartera" name="nombre_cartera" placeholder="Nombre y Apellido" onkeydown="moveToNextInput(event, 'correo_cartera')" required>
             </div>
             
             <div class="user-input-box">
             <label for="correo_cartera">Correo principal:</label>
-            <input type="email" id="correo_cartera" name="correo_cartera" placeholder="Correo electrónico principal" onkeydown="moveToNextInput(event, 'ext_cartera')">
+            <input type="email" id="correo_cartera" name="correo_cartera" placeholder="Correo electrónico principal" onkeydown="moveToNextInput(event, 'ext_cartera')" required>
             </div>
 
             <div class="user-input-box">
@@ -373,7 +374,7 @@
             
             <div class="user-input-box">
             <label for="telefono_movil_cartera">Teléfono Móvil:</label>
-            <input type="tel" id="telefono_movil_cartera" name="telefono_movil_cartera" placeholder="Ejemplo: 3153758214" onkeydown="moveToNextInput(event, 'fecha_cierre_facturacion')">
+            <input type="tel" id="telefono_movil_cartera" name="telefono_movil_cartera" placeholder="Ejemplo: 3153758214" onkeydown="moveToNextInput(event, 'fecha_cierre_facturacion')" required>
             </div>
             
             <div class="user-input-box">
@@ -475,7 +476,14 @@
         </div>
     
         <div class="main-user-info">
-            
+
+            <div class="user-input-box" style="width: 100%;">
+            <label for="rut" style="text-align: center; ">Adjunta Rut de la Empresa</label>        
+            <div class="form-submit-btn" style="margin: 0 0 24px 0">
+            <input type="file" name="fileInput" accept=".pdf" style="background-color: rgb(13, 75, 133);" required>
+            </div>
+            </div>
+
             <div class="user-input-box">
             <label for="nom_diligencio">Nombre y Apellido quien diligenció el formulario:</label>
             <input type="text" id="nom_diligencio" name="nom_diligencio" onkeydown="moveToNextInput(event, 'cargo_diligencio')" required>
@@ -486,14 +494,16 @@
             <input type="text" id="cargo_diligencio" name="cargo_diligencio" required>
             </div>       
         </div>
+        
+        
+
     
         <div class="form-submit-btn">
-        
         <input type="submit" value="Enviar Formulario" onclick="validateDatos(); validateLegal(); validateTributaria(); validateIca()">
         </div>
 
     </form>
-    
+ 
     
    </div>
 </div>

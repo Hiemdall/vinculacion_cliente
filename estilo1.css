@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+
+  img{
+    width: 295px;
+    height: 95;
+  }
+
+  h1 {
+    color: rgb(13, 75, 133);
+    text-align: center;
+    font-size: 30px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  th {
+    background-color: rgb(13, 75, 133);
+    color: white;
+  }
+
+  td a {
+    color: rgb(13, 75, 133);
+    text-decoration: none;
+  }
+
+  td a:hover {
+    text-decoration: underline;
+  }
+
+  .form-submit-btn {
+    align-items: center;
+    width: 100%;
+    display: grid;
+    place-content: end;
+    margin-top: 14px;
+  }
+  
+  .form-submit-btn a {
+    display: block;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-left: 12px;
+    margin-right: 12px;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background: rgb(13, 75, 133);
+  }
+  
